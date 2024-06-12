@@ -1,1 +1,10 @@
 # CL-2024
+## 程式碼說明
+- 未開發系統及介面，因此本repository主要提供**建構知識本體的前處理過程**及**知識本體**
+- E-Hownet雖為樹狀結構的概念，但其記錄方式仍然是以**結構化資料庫**，因此為轉換成知識本體(類似樹狀結構)，需要進行一定轉換
+- 轉換而成的內容須符合知識本體檔案(所使用為.owl)，因此透過Python的套件owlready2完成這件事
+## 檔案結構
+- searchWordSense.py：在本地端資料庫，取出E-Hownet的詞意，輸出成JSON檔
+- searchWordFromSense.py：在本地端資料庫，取出E-Hownet的"空間相關"的詞彙，輸出成JSON檔
+- ConvertJSONToOWL.ipynb：將上述兩者獲得的JSON透過透過Python的套件owlready2轉換成.owl
+- GeoSpatialDescription.rdf：本研究之上層知識本體(不包含領域知識本體)
